@@ -30,6 +30,10 @@
 #define VAL_GPIO_USB_CRL            0x88888888      /*  PA7...PA0 */
 #define VAL_GPIO_USB_CRH            0x88811888      /* PA15...PA8 */
 
+#define VAL_GPIO_OTHER_ODR          VAL_GPIO_USB_ODR
+#define VAL_GPIO_OTHER_ODR          VAL_GPIO_USB_CRL
+#define VAL_GPIO_OTHER_ODR          VAL_GPIO_USB_CRH
+
 #define VAL_GPIO_LED_ODR            0xFFFFFFFF
 #define VAL_GPIO_LED_CRL            0x88888888      /*  PC7...PC0 */
 #define VAL_GPIO_LED_CRH            0x88388888      /* PC15...PC8 */
