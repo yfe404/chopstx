@@ -68,11 +68,11 @@ void wait_button() {
         while (1){
             set_led(1);
             wait(1000000);
-            if( ! (GPIO_OTHER->IDR & (1 << GPIO_BUTTON_PIN)) ) break;
+            if( (GPIO_OTHER->IDR & (1 << GPIO_BUTTON_PIN)) ) break;
 
             set_led(0);
             wait(1000000);
-            if( ! (GPIO_OTHER->IDR & (1 << GPIO_BUTTON_PIN)) ) break;
+            if( (GPIO_OTHER->IDR & (1 << GPIO_BUTTON_PIN)) ) break;
         }
     #endif
 }
