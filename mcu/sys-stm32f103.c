@@ -65,11 +65,14 @@ static void wait (int count)
 
 void wait_button() {
     #if defined(GPIO_BUTTON_PIN)
-        while (GPIO_OTHER->IDR & (1 << GPIO_BUTTON_PIN)){
+        while (true){
             set_led(1);
-            wait(1000000);
+            wait(700000);
+            if((GPIO_OTHER->IDR & (1 << GPIO_BUTTON_PIN)) == 1) break;
+
             set_led(0);
-            wait(1000000);
+            wait(700000);
+            if((GPIO_OTHER->IDR & (1 << GPIO_BUTTON_PIN)) == 1) break;
         }
     #endif
 }
