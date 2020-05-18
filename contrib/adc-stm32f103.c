@@ -191,6 +191,7 @@ get_adc_config (uint32_t config[4])
     case BOARD_ID_STM32_PRIMER2:
     case BOARD_ID_STM8S_DISCOVERY:
     case BOARD_ID_ST_DONGLE:
+    case BOARD_ID_TURTLE_AUTH:
     case BOARD_ID_NITROKEY_START:
     case BOARD_ID_FST_01SZ:
     default:
